@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event_Listener</title>
+</head>
+<body>
+    
+    <!-- <h3>Hey there! This is <span onclick="alert('hello Rajeev' )"> Rajeev Ranjan</span></h3> -->
+
+    <h3 id = "nameBlock">Hey there! This is <span> Rajeev Ranjan</span></h3>
+
+    <!-- second way -->
+   <!-- <button onclick="handleButtonClick()">Button</button> -->
+
+   <!-- Third way actually -->
+
+   <button id="myButton">Click me</button>
+
+</body>
+
+
+<script>
+
+//second way actually
+function handleButtonClick(){
+    console.log('That button is clicked')
+    alert("hey i'm clicked");
+}
+
+
+//most preffered way
+const ell = document.getElementById("myButton")
+
+const name = document.getElementById("nameBlock");
+
+
+function changeColor(){
+    name.style.color = 'red';
+}
+
+name.addEventListener('click' , changeColor)
+
+// name,addEventListener("click" , () => {
+//     name.style.color = 'red';
+// })
+
+function dosomething(){
+    console.log("I am clicked");
+
+}
+ell.addEventListener("click" , dosomething);
+
+
+
+
+</script>
+
+
+    <script>
+        //koi mera dost aaya aur dusra function call kr diya same id dekr to both function will call none will override while 
+        //in the third case it was overriding
+        //third way
+        const el = document.getElementById('myButton');
+        el.onclick = () => {
+            console.log('Hacked');
+        };
+    </script>
+</html>

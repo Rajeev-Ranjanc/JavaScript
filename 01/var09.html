@@ -1,0 +1,46 @@
+<!-- /// Query selector : get element by id  && get element by class-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuerySelector</title>
+
+<style>
+
+.red-color{
+    color: red;
+}
+.underline{
+    text-decoration: underline;
+}
+
+</style>
+
+</head>
+<body>
+    
+<h3>Hey! there My name is <span class="red-color" id="username">Rajeev Ranjan</span> </h3>
+
+</body>
+
+<script>
+const name = document.querySelector("#username");
+name.innerText = 'John Doe'
+// name.classList.add("red-color" , "underline") // adding style using javascript class
+
+
+
+console.log(name.innerText)
+
+name.style.textDecoration="underline"
+name.style.color="tomato"
+
+name.classList.remove("red-color")
+
+name.parentElement.style.background= "green"
+console.log(name.classList)
+
+</script>
+
+</html>
