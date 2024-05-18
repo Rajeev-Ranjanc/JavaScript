@@ -32,6 +32,8 @@ arr.shift();
 
 const newArr = arr.join();
 
+// join() returns an array as a string
+
 // console.log(arr);
 
 // console.log(newArr);
